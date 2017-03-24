@@ -3,6 +3,14 @@
 
 > Easily find all available global variables in document. No guessing. No manually filtering through `Object.keys(window)`.
 
+## Problem to solve
+Imagine you are joining big front-end project and you want to see all global variables available for you. Some options you have:
+ 1. guess names by typing them in console via dev tools
+ 2. call `Objec.keys(window).forEach(key => console.log(key))` and match output against values from ECMAScript specification and those non-standard provided by various browser vendor
+ 3. grab this package and call `global.printGlobals()` and just look at output
+
+(And yea - I suggest you to go with #3.)
+
 ## Installation
 
 Install using [npm](https://www.npmjs.org/):

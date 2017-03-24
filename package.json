@@ -1,7 +1,7 @@
 {
   "name": "get-globals",
-  "version": "0.0.2",
-  "description": "Extract all global variables from your document object.",
+  "version": "0.0.3",
+  "description": "Easily find all available global variables in document. No guessing. No manually filtering through Object.keys(window).",
   "repository": {
     "type": "git",
     "url": "https://github.com/reod/get-globals.git"
