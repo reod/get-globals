@@ -11,6 +11,8 @@ Imagine you are joining big front-end project and you want to see all global var
 
 (And yea - I suggest you to go with #3.)
 
+![get-globals at work](http://i.imgur.com/t0g8Hgv.gif)
+
 ## Installation
 
 Install using [npm](https://www.npmjs.org/):
