@@ -1,7 +1,11 @@
 {
   "name": "get-globals",
   "version": "0.0.1",
-  "description": "Extract global variables.",
+  "description": "Extract all global variables from your document object.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reod/get-globals.git"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
