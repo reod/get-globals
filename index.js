@@ -13,7 +13,7 @@ function getGlobals() {
     'freshContext',
     'globals'
   ];
-  
+
   const iWindow = document.createElement('iframe');
   document.body.appendChild(iWindow);
   const freshContext = iWindow.contentWindow;
@@ -29,10 +29,6 @@ function getGlobals() {
 };
 
 function printGlobals() {
-  const globals = getGlobals().reduce((globals, globalVar) => {
-    globals += (' ' + globalVar);
-    return globals;
-  }, 'Available global variables: ');
-
-  console.log(globals);
+  const globals = getGlobals().join(', ');
+  console.log(`Available global variables: ${globals}.`);
 };
