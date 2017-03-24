@@ -1,7 +1,7 @@
 
 # get-globals
 
-> Easily find all available global variables document. No guessing. No filtering through `Object.keys(window)`.
+> Easily find all available global variables in document. No guessing. No manually filtering through `Object.keys(window)`.
 
 ## Installation
 
@@ -34,6 +34,12 @@ global.printGlobals();
 
 Planed. Stay tuned.
 
+## API
+##### `globals.getGlobals()`
+Returns all available global variables.
+
+##### `globals.printGlobals()`
+Logs all available global variables using `console.log`.
 ## Support
 
 If you have any problem or suggestion please open an issue [here](https://github.com/reod/get-globals/issues).
