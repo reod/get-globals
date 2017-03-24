@@ -48,6 +48,7 @@ Returns all available global variables.
 
 ##### `globals.printGlobals()`
 Logs all available global variables using `console.log`.
+
 ## Support
 
 If you have any problem or suggestion please open an issue [here](https://github.com/reod/get-globals/issues).
