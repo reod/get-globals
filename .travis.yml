@@ -13,3 +13,5 @@ deploy:
   on:
     tags: true
     repo: reod/get-globals
+notifications:
+  email: false
