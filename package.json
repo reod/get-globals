@@ -12,7 +12,7 @@
   "homepage": "https://github.com/reod/get-globals",
   "main": "index.js",
   "scripts": {
-    "test": "echo TODO: add tests"
+    "test": "echo TODO: add missing tests"
   },
   "keywords": [
     "variable",
