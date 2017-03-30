@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- '7'
+before_deploy:
+- echo 'deploying app to npm registry...'
+after_deploy:
+- echo 'deploy finished'
+deploy:
+  provider: npm
+  email: remek.ambroziak@gmail.com
+  api_key:
+    secure: GxCxfeHpHBcqWVObjfbZkFLNzeZ3qtxLEiyXsIGybMRhty+Az798ORIMlwH4UQBaPM4XkmMTJP+ZNfAOnK8+kPyXdsL0M7EjEKR2w0lvXzgNDKS7MUuXUDBPmyWCVm5f8uLa2NvmX8SOp5ISbxHO00qKSV5upSVBI7vmK6OwbRr9RW1m6a/gU2zc1qi1XIsJC3INsR4twxwLvyOP21OeAbjNY8lUEuZyK249UGlP3GjPKYNj5IxLoZrIdtdOfkdTkb4QNioj+2D9X6llwotlyF/oXRpnRgLHgula/YtuoSoabPGcEwzrPb3Gm8FuxRVcs1RdnRais4CABq9XQuqK3gNHhTdMQ9DOdOoBUG7oNfXdGfdVHgu5UfVEIie/+9ykmS0sTub2OXJBhJhDMx/WZj+11bbJazPpxAczlnKqEWIoXT0Gv04Up7SBS86Dn78/fvvjCCwITjjjCRqMnRJYro31Sw7AdKPGHm7T48fgWZTXkMozMdTkziJc05HPS7Afkee1aQP+iAq3wLPE2knF8a8A7aLzFKEGXRNCsk3eAcjCD5Olh9P68Fg9HH6JmGbwkjj92E011INhdgpfz65JkxRecMR8ijLc8vxnxN20nwXTVHZi4ZoP7waSRsZKtJuf8NMuJfBPo112ky2MPsXB5+XArGUljadtz+ZZWkeJXm8=
+  on:
+    tags: true
+    repo: reod/get-globals
