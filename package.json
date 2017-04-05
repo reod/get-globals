@@ -1,6 +1,6 @@
 {
   "name": "get-globals",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Easily find all available global variables in document. No guessing. No manually filtering through Object.keys(window).",
   "repository": {
     "type": "git",
