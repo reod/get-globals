@@ -1,34 +1,51 @@
-module.exports = {
-  getGlobals,
-  printGlobals
-};
+(function (root, factory) {
 
+  if (typeof define === 'function' && define.amd) {
+    define([], factory);
+  } else if (typeof exports === 'object') {
+      module.exports = factory();
+  } else {
+    root['getGlobals'] = factory();
+  }
 
-function getGlobals() {
-  const forceExclude = [
-    'getGlobals',
-    'forceExclude',
-    'runnerWindow',
-    'iWindow',
-    'freshContext',
-    'globals'
-  ];
+})(this, function () {
 
-  const iWindow = document.createElement('iframe');
-  document.body.appendChild(iWindow);
-  const freshContext = iWindow.contentWindow;
+  if (typeof document === 'undefined') {
+    throw new Error('No node support yet.');
+  }
 
-  const globals = Object
-    .keys(window)
-    .filter(key => !freshContext.hasOwnProperty(key))
-    .filter(key => !forceExclude.includes(key));
+  return {
+    getGlobals,
+    printGlobals,
+  };
 
-  document.body.removeChild(iWindow);
+  function getGlobals() {
+    const forceExclude = [
+      'getGlobals',
+      'forceExclude',
+      'runnerWindow',
+      'iWindow',
+      'freshContext',
+      'globals'
+    ];
 
-  return globals;
-};
+    const iWindow = document.createElement('iframe');
+    document.body.appendChild(iWindow);
+    const freshContext = iWindow.contentWindow;
 
-function printGlobals() {
-  const globals = getGlobals().join(', ');
-  console.log(`Available global variables: ${globals}.`);
-};
+    const globals = Object
+      .keys(window)
+      .filter(key => !freshContext.hasOwnProperty(key))
+      .filter(key => !forceExclude.includes(key));
+
+    document.body.removeChild(iWindow);
+
+    return globals;
+  };
+
+  function printGlobals() {
+    const globals = getGlobals().join(', ');
+    console.log(`Available global variables: ${globals}.`);
+  };
+
+});
